@@ -1,0 +1,113 @@
+.foot {
+    background-image:linear-gradient(
+        to right bottom,
+        rgba($color-blue-dark,0.8),
+        rgba($color-primary-dark,0.8)),
+        url(../img/foot.jpg);
+        background-size: cover;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-rows: repeat(2, minmax(min-content, auto-fit));
+    grid-gap: 3rem;
+    padding: 2rem 3rem;
+    grid-column-gap: 3rem;
+    align-items: start;
+    justify-items: center;
+
+    &__brand {
+font-size: 4rem;
+display: flex;
+justify-self: center;
+align-self: center;
+&:hover {
+    cursor: pointer;
+}
+    }
+
+    &__logo {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    &__grafit {
+        text-transform: uppercase;
+        color: $color-primary-light;
+        margin-left: 2rem;
+    }
+
+    &__copyright {
+        color: $color-primary-light;
+        grid-column: 1 / -1;
+        @media only screen and (max-width: $bp-small) {
+           text-align: center;
+           margin-top: 3rem;
+            }
+    }
+
+    &__social {
+        align-self: center;
+        justify-self: center;
+        grid-gap: 2rem;
+
+        &--facebook {
+fill: $color-primary-light;
+width: 5rem;
+height: 5rem;
+&:hover {
+    cursor: pointer;
+}
+        }
+
+        &--instagram {
+            fill: $color-primary-light;
+            width: 5rem;
+            height: 5rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__address {
+        color: $color-primary-light;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+
+    &__contacts {
+        &--phone{
+color: $color-primary-light;
+text-decoration: none;
+display: flex;
+@media only screen and (max-width: $bp-small) {
+    justify-content: center;
+    align-content: center;
+    }
+        }
+
+        &--mail {
+color: $color-primary-light;
+text-decoration: none;
+display: flex;
+@media only screen and (max-width: $bp-small) {
+justify-content: center;
+align-content: center;
+}
+
+        }
+    }
+
+    &__icon {
+        fill: $color-primary-light;
+        width: 4rem;
+        height: 4rem;
+        margin-right: 2rem;
+    }
+}
+
+
+   
+    

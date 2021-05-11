@@ -1,0 +1,99 @@
+.container {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.7;
+    color:$color-blue-dark
+}
+
+.heading-primary {
+    display: block;
+    color: $color-white;
+    font-family: "raleway" sans-serif;
+    text-transform: uppercase;
+    
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    
+
+
+    &--main {
+        display: block;
+        font-size: 8rem;
+        font-weight: 700;
+        letter-spacing: 2rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+        }
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2.5rem ;
+        // width: 30vw;
+        // text-align: center;
+        letter-spacing: 0.5rem;
+    
+    animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+        letter-spacing: 0.5rem;
+        }
+    }
+}
+
+h2 {
+    font-family: "raleway", sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-column: 1 / -1;
+    text-align: center;
+    color: $color-blue-dark;
+
+    
+}
+
+.heading-4 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $color-primary-dark;
+}
+
+.heading-2 {
+    text-transform: none;
+    color: $color-primary-dark;
+    margin: 2rem 0;
+    justify-self: start;
+
+    @media only screen and (max-width: $bp-largest) {
+        justify-self: center;
+        align-self: center;
+    }
+
+    }
+
+
+    .headin {
+        background:linear-gradient(
+            to right bottom,
+            rgba($color-blue-dark,0.8),
+            rgba($color-primary-dark,0.8)),
+            url(../img/story-1.jpg);
+            background-size: cover;
+            background-position: center;
+color: $color-primary-light;
+    }
+
+.mb-sm { margin-bottom: 2rem;}
+.mb-md { margin-bottom: 3rem;}
+.mb-lg { margin-bottom: 4rem;}
+.mb-hg { margin-bottom: 8rem;}

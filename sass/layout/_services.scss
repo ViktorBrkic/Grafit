@@ -1,0 +1,38 @@
+.services {
+    grid-column: full-start / full-end;
+    background: linear-gradient( to right,
+    rgba($color-primary-light, 0.5),
+    rgba($color-primary-light, 0.5)),
+    url(../../img/texture.jpg); 
+    background-size: cover;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-row-gap: 7rem;
+    grid-column-gap: 10rem;
+    align-items: start;
+  padding: 5rem
+
+
+}
+
+
+.service {
+display: grid;
+grid-template-columns:1fr;
+grid-row-gap: 2rem;
+justify-items: center;
+
+    &__icon{
+fill: $color-blue-dark;
+width: 6rem;
+height: 6rem;
+ }
+
+    &__text{
+        font-size: 2rem;
+        color: $color-primary-dark;
+        text-align: center;
+    }
+}

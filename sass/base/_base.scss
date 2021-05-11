@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //this defines what 1rem is
+    box-sizing: border-box;
+    font-size: 62.5%;  //1rem = 10px;  10px/16px = 62.5%
+
+    @media only screen and(max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    // @include respond-phone {
+    //     font-size: 50%;
+    // }
+
+    // @include respond(phone) {
+    //     font-size: 50%;
+    // }  not necessary
+
+ 
+
+    @include respond(tab-land) { //width < 1200?
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25% 
+    }
+
+    @include respond(tab-port) { //width < 900?
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+.container {
+    
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 95vh min-content minmax(40vh, min-content) repeat(2, min-content);
+    grid-template-columns: [full-start]1fr [center-start]repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] 1fr [full-end];
+
+    @include respond(tab-port) { 
+        padding: 0;
+    }
+
+
+    @media only screen and(max-width: $bp-medium) {
+        grid-template-rows: 100vh min-content minmax(40vh, min-content) repeat(2, min-content);
+    }
+    }

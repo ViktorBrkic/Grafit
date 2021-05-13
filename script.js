@@ -29,18 +29,28 @@
 // var btn = document.querySelector('.btn')
 
 // btn.addEventListener('click', function () {
-//     smoothScroll('.story', 1000);
+//     smoothScroll('.story__content', 1000);
 // });
 
 const btnScrollToStory = document.querySelector(".btn");
 
 btnScrollToStory.addEventListener("click", function () {
-
-    window.scrollTo({
-        top: 1900,
+    document.querySelector('.story__content').scrollIntoView({
         behavior: "smooth"
     });
+    // window.scrollTo({
+
+    //     top: 1900,
+    //     behavior: "smooth"
+    // });
 });
+
+// let btn = document.querySelector('.btn');
+// let el = document.querySelector('.story__content');
+
+// btn.addEventListener('click', function () {
+//     el.scrollIntoView(true);
+// });
 
 document.getElementById("facebook").onclick = function () {
     location.href = "https://www.facebook.com/grafitmostar";

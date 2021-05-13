@@ -1,10 +1,10 @@
 .gallery {
     grid-column: full-start / full-end;
-    background: linear-gradient( to bottom,
-    rgba($color-blue-dark, 0.5),
-    rgba($color-blue-dark, 0.5)),
-    url(../../img/texture.jpg); 
-    background-size: cover;
+    // background: linear-gradient( to bottom,
+    // rgba($color-primary-dark, 1),
+    // rgba($color-primary-dark, 1)),
+    // url(../../img/texture.jpg); 
+    // background-size: cover;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 5vw);

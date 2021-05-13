@@ -8,7 +8,7 @@
     grid-column: full-start / full-end;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-template-rows: repeat(2, minmax(min-content, auto-fit));
     grid-gap: 3rem;
     padding: 2rem 3rem;
@@ -21,7 +21,8 @@ font-size: 4rem;
 display: flex;
 justify-self: center;
 align-self: center;
-&:hover {
+&:hover,
+&:focus {
     cursor: pointer;
 }
     }
@@ -35,9 +36,14 @@ align-self: center;
         text-transform: uppercase;
         color: $color-primary-light;
         margin-left: 2rem;
+        &:focus,
+        &:hover {
+            color: $color-blue-light;
+        }
     }
 
     &__copyright {
+        font-size: 1.5rem;
         color: $color-primary-light;
         grid-column: 1 / -1;
         @media only screen and (max-width: $bp-small) {
@@ -55,8 +61,10 @@ align-self: center;
 fill: $color-primary-light;
 width: 5rem;
 height: 5rem;
-&:hover {
+&:hover,
+&:focus {
     cursor: pointer;
+    fill: $color-blue-light;
 }
         }
 
@@ -64,8 +72,10 @@ height: 5rem;
             fill: $color-primary-light;
             width: 5rem;
             height: 5rem;
-            &:hover {
+            &:hover,
+            &:focus {
                 cursor: pointer;
+                fill: $color-blue-light;
             }
         }
     }
